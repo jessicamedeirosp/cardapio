@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+:root {
+    font-size: 10px;
+    --rosa-500: #F964A8;
+    --rosa-100: #FFF2DF;
+    --marron-500: #66453C;
+    --border-radius: 1rem;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;  
+    color: var(--marron-500);
+    background-color: var(--rosa-100);
+}
+
