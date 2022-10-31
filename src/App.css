@@ -36,50 +36,26 @@
 .espaco-fixo {
     row-gap: 2rem;
 }
-
-.produto__imagem {
-    width: 100%;
-    border-radius: var(--border-radius) var(--border-radius)  0 0;
+.gap-1 {
+    gap: 1rem;
 }
 
-.produto__informacoes {
-    padding: 1.6rem;
-    
-}
-.produto__nome {
-    text-transform: uppercase;
-    font-size: 2.4rem;
-}
-
-.produto__descricao {
-    font-size: 1.6rem;
-}
-
-.produto__preco {
-    margin: 1rem 0;
-    font-size:2.4rem;
+.produtos {
+    width: 70%;
+    margin-right: 1rem;
 }
 
 
-.btn__adicionar {
+.btn {
     padding: .8rem;
-    background-color: var(--rosa-500);
-    color: var(--rosa-100);
-    border: 3px dashed var(--marron-500);  
     border-radius: var(--border-radius);
     width: 100%; 
-}
-.produto {
-    width: 100%;       
-    border-radius: var(--border-radius);   
-    background-color: #fff;
-    text-align: left;
+    margin: .8rem 0
 }
 
-@media(min-width: 768px) {
-    .produto {
-        width: 33%;
-        max-width: 300px;
-       
-    }
+.btn__finalizar { 
+    background-color: var(--rosa-500);
+    color: var(--rosa-100);
+    border: 3px dashed var(--marron-500);     
+
 }

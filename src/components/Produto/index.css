@@ -1,0 +1,39 @@
+.produto__imagem {
+    width: 100%;
+    border-radius: var(--border-radius) var(--border-radius)  0 0;
+}
+
+.produto__informacoes {
+    padding: 1.6rem;
+    
+}
+.produto__nome {
+    text-transform: uppercase;
+    font-size: 2.4rem;
+}
+
+.produto__descricao {
+    font-size: 1.6rem;
+}
+
+
+.btn__adicionar {
+    color: var(--rosa-100);
+    border: 3px solid var(--marron-500);
+    background: var(--marron-500);
+}
+
+.produto {
+    width: 100%;       
+    border-radius: var(--border-radius);   
+    background-color: #fff;
+    text-align: left;
+}
+
+@media(min-width: 768px) {
+    .produto {
+        width: 33%;
+        max-width: 300px;
+       
+    }
+}

@@ -1,0 +1,15 @@
+
+.carrinho__titulo {
+    text-transform: uppercase;
+    text-align: center;
+}
+.carrinho__produto {
+    margin-bottom: 1rem;
+}
+.carrinho__produto__imagem {
+    width: 80px;
+    border-radius: var(--border-radius);
+}
+.carrinho__total {
+    color: var(--rosa-500)
+}

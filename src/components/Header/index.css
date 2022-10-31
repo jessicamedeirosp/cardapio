@@ -6,6 +6,10 @@
     text-align: center;
     border-bottom: 3px dashed var(--marron-500);
 }
+.carrinho {
+    
+    width: calc(30% - 1rem);
+}
 
 
 .itens-carrinho {

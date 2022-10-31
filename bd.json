@@ -29,6 +29,12 @@
             "nome": "Brigadeiro Ninho com Nutella",
             "descricao": "Brigadeiro Gourmet de Leite Ninho recheado com Nutella 80g.",
             "preco": 1000
+        },
+        {
+            "id": 6,
+            "nome": "Brigadeiro Ninho com Prestigio",
+            "descricao": "Brigadeiro Gourmet de Leite Ninho recheado com Prestigio 80g.",
+            "preco": 1000
         }
     ]
 }

@@ -19,7 +19,7 @@ button {
     --rosa-500: #F964A8;
     --rosa-100: #FFF2DF;
     --marron-500: #66453C;
-    --border-radius: 1rem;
+    --border-radius: .8rem;
 }
 
 body {
