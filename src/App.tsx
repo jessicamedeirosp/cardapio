@@ -11,9 +11,14 @@ import api from './services/api'
 function App() {
   const [produtos, setProdutos] = useState<IProduto[]>([] )
   const [produtosNoCarrinho, setProdutosNoCarrinho] = useState<IProdutoNoCarrinho[]>([])
+  const [carrinhoAberto, setCarrinhoAberto] = useState<boolean>(false)
   async function carregarProdutos() {
     const resposta: AxiosResponse = await api.get('/produtos')
     setProdutos(resposta.data)
+  }
+
+  function abrirFecharCarrinho() {
+    setCarrinhoAberto(!carrinhoAberto)
   }
 
   useEffect(() => {
@@ -22,15 +27,15 @@ function App() {
 
   return (
     <>
-      <Header produtosNoCarrinho={produtosNoCarrinho} />
-      <main>
+      <Header produtosNoCarrinho={produtosNoCarrinho} abrirFecharCarrinho={abrirFecharCarrinho}/>
+      <main className='main'>
         <div className="conteudo conteudo-flexivel justificar-centro">
           <section className="produtos conteudo-flexivel alinhar-centro justificar-espaco-entre quebra-linha espaco-fixo">
             {produtos && produtos.map((item: IProduto) => (
               <ProdutoList key={item.id} item={item} setProdutosNoCarrinho={setProdutosNoCarrinho} produtosNoCarrinho={produtosNoCarrinho} />
             ))}
           </section>
-          <Cart produtosNoCarrinho={produtosNoCarrinho} />
+          <Cart produtosNoCarrinho={produtosNoCarrinho} carrinhoAberto={carrinhoAberto} abrirFecharCarrinho={abrirFecharCarrinho} />
         </div>
       </main>
     </>

@@ -13,3 +13,33 @@
 .carrinho__total {
     color: var(--rosa-500)
 }
+.carrinho {    
+    width: calc(30% - 1rem);
+}
+.carrinho__fechar {
+    display: none;    
+}
+.carrinho__cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+@media(max-width: 768px) {
+    .carrinho {    
+        width: 100%;
+        height: 100%;
+        padding: 2rem 1rem;
+        background: var(--rosa-100); 
+        position: absolute;        
+        top: 0;     
+        display: none;
+        
+    }
+    .carrinho--aberto {
+        display: block;
+    }
+    .carrinho__fechar {
+        display: block;
+    }
+}

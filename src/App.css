@@ -1,61 +1,58 @@
 .conteudo {
-    max-width: 1280px;
-    margin: auto;
-    width: 100%;
-    padding: 1.6rem;
-    position: relative;
+  max-width: 1280px;
+  margin: auto;
+  width: 100%;
+  padding: 1.6rem;
 }
 
-
-
+.main {
+  position: relative;
+}
 .logo {
-    width: 180px;
+  width: 180px;
 }
 
 .conteudo-flexivel {
-    display: flex;
-    
+  display: flex;
 }
 
 .alinhar-centro {
-    align-items: center;
-  
+  align-items: center;
 }
 .justificar-espaco-entre {
-    justify-content: space-between;
-    
+  justify-content: space-between;
 }
 .justificar-centro {
-    justify-content: center;
-    
+  justify-content: center;
 }
 .quebra-linha {
-    flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .espaco-fixo {
-    row-gap: 2rem;
+  row-gap: 2rem;
 }
 .gap-1 {
-    gap: 1rem;
+  gap: 1rem;
+}
+.posicao-relativa {
+  position: relative;
 }
 
 .produtos {
-    width: 70%;
-    margin-right: 1rem;
+  width: 70%;
+  margin-right: 1rem;
 }
-
 
 .btn {
-    padding: .8rem;
-    border-radius: var(--border-radius);
-    width: 100%; 
-    margin: .8rem 0
+  padding: 0.8rem;
+  border-radius: var(--border-radius);
+  width: 100%;
+  margin: 0.8rem 0;
 }
 
-.btn__finalizar { 
-    background-color: var(--rosa-500);
-    color: var(--rosa-100);
-    border: 3px dashed var(--marron-500);     
-
+.btn__finalizar {
+  background-color: var(--rosa-500);
+  color: var(--rosa-100);
+  border: 3px dashed var(--marron-500);
 }

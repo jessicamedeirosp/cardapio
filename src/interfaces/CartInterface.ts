@@ -1,5 +1,7 @@
 import { IProdutoNoCarrinho } from "./ProdutoInterface";
 
 export interface ICart {
-    produtosNoCarrinho: IProdutoNoCarrinho[]
+    produtosNoCarrinho: IProdutoNoCarrinho[],
+    abrirFecharCarrinho: () => void,
+    carrinhoAberto: boolean
 }
