@@ -1,17 +1,18 @@
 
+import { AxiosResponse } from 'axios'
 import { useEffect, useState } from 'react'
 import './App.css'
 import { Cart } from './components/Cart'
 import { Header } from './components/Header'
-import { Produto } from './components/Produto'
+import { ProdutoList } from './components/ProdutoList'
+import { IProduto, IProdutoNoCarrinho } from './interfaces/ProdutoInterface'
 import api from './services/api'
-import { converterPreco, somarCompra } from './utils/Utils'
 
 function App() {
-  const [produtos, setProdutos] = useState([])
-  const [produtosNoCarrinho, setProdutosNoCarrinho] = useState([])
+  const [produtos, setProdutos] = useState<IProduto[]>([] )
+  const [produtosNoCarrinho, setProdutosNoCarrinho] = useState<IProdutoNoCarrinho[]>([])
   async function carregarProdutos() {
-    const resposta = await api.get('/produtos')
+    const resposta: AxiosResponse = await api.get('/produtos')
     setProdutos(resposta.data)
   }
 
@@ -25,8 +26,8 @@ function App() {
       <main>
         <div className="conteudo conteudo-flexivel justificar-centro">
           <section className="produtos conteudo-flexivel alinhar-centro justificar-espaco-entre quebra-linha espaco-fixo">
-            {produtos && produtos.map(item => (
-              <Produto key={item.id} item={item} setProdutosNoCarrinho={setProdutosNoCarrinho} produtosNoCarrinho={produtosNoCarrinho} />
+            {produtos && produtos.map((item: IProduto) => (
+              <ProdutoList key={item.id} item={item} setProdutosNoCarrinho={setProdutosNoCarrinho} produtosNoCarrinho={produtosNoCarrinho} />
             ))}
           </section>
           <Cart produtosNoCarrinho={produtosNoCarrinho} />

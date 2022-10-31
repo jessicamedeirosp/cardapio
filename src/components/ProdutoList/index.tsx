@@ -1,20 +1,19 @@
-import { useEffect } from "react";
+import { IProduto, IProdutoList, IProdutoNoCarrinho } from "../../interfaces/ProdutoInterface";
 import { converterPreco } from "../../utils/Utils";
 import './index.css'
 
-export function Produto({item, setProdutosNoCarrinho, produtosNoCarrinho}) {
-    const {nome, descricao, preco} = item;
-   
+export function ProdutoList({item, setProdutosNoCarrinho, produtosNoCarrinho}: IProdutoList) {
+    const {nome, descricao, preco}: IProduto = item;   
 
     function adicionarProdutoNoCarrinho() {
-        let newItem = {
+        let newItem: IProdutoNoCarrinho = {
             ...item,
             quantidade: 1
         }
-        const existeProdutoNoCarrinho = produtosNoCarrinho.filter(produto => produto.id === item.id)
+        const existeProdutoNoCarrinho = produtosNoCarrinho.filter((produto: IProdutoNoCarrinho) => produto.id === item.id)
      
          if(existeProdutoNoCarrinho.length) {
-             const novoProdutosNoCarrinho =  produtosNoCarrinho.filter(produto => produto.id !== item.id)
+             const novoProdutosNoCarrinho =  produtosNoCarrinho.filter((produto: IProdutoNoCarrinho) => produto.id !== item.id)
             newItem = {
                 ...existeProdutoNoCarrinho[0], 
                 quantidade: existeProdutoNoCarrinho[0].quantidade + 1 
@@ -25,10 +24,6 @@ export function Produto({item, setProdutosNoCarrinho, produtosNoCarrinho}) {
         
         setProdutosNoCarrinho([...produtosNoCarrinho,  newItem])
     }
-    useEffect(() => {
-
-        console.log(produtosNoCarrinho)
-    },[produtosNoCarrinho])
 
     
     return (

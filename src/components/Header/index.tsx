@@ -1,9 +1,11 @@
 
 import logoImagem from "../../assets/logo.svg";
+import { IHeader } from "../../interfaces/HeaderInteface";
+import { somarQuantidadeDeProdutos } from "../../utils/Utils";
 import './index.css';
 
-export function Header({produtosNoCarrinho}) {
-  const quantidadeDeProdutosNoCarrinho = produtosNoCarrinho.reduce((acc, item) => acc += item.quantidade, 0)
+export function Header({produtosNoCarrinho}: IHeader ) {
+  const quantidadeDeProdutosNoCarrinho = somarQuantidadeDeProdutos(produtosNoCarrinho)
   return (
     <header className="cabecalho">
       <div className="conteudo conteudo-flexivel alinhar-centro justificar-centro">
