@@ -1,6 +1,5 @@
 import { ICart } from "../../interfaces/CartInterface";
 import { converterPreco, somarCompra } from "../../utils/Utils";
-import CloseImagem from '../../assets/close.svg';
 import './index.css'
 import { useState } from "react";
 
@@ -16,8 +15,7 @@ export function Cart({ produtosNoCarrinho, abrirFecharCarrinho, carrinhoAberto }
   return (
     <section className={`carrinho ${carrinhoAberto ? 'carrinho--aberto' : ''}`}>
       <div className="carrinho__cabecalho">
-        <h2 className='carrinho__titulo'>Carrinho <span className='carrinho__total'>{somarCompra(produtosNoCarrinho)}</span></h2>
-        <img src={CloseImagem} alt="fechar carrinho" className="carrinho__fechar" onClick={abrirFecharCarrinho}/>
+        <h2 className='carrinho__titulo'>Carrinho <span className='carrinho__total'>{somarCompra(produtosNoCarrinho)}</span></h2>      
       </div>
       <div className="carrinho__produtos">
         {produtosNoCarrinho && produtosNoCarrinho.map(({ id, nome, quantidade, preco }) => (

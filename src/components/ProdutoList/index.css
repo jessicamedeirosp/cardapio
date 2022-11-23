@@ -24,16 +24,9 @@
 }
 
 .produto {
-    width: 100%;       
+    width: 33%;
+    max-width: 300px;    
     border-radius: var(--border-radius);   
     background-color: #fff;
     text-align: left;
-}
-
-@media(min-width: 768px) {
-    .produto {
-        width: 33%;
-        max-width: 300px;
-       
-    }
 }

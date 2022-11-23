@@ -11,15 +11,9 @@
 .itens-carrinho {
     background: var(--marron-500);
     color: var(--rosa-100);
-    padding: 0.6rem 1rem;
+    padding: 1rem 2rem;    
+    font-size: 1.6rem;
     border-radius: 50%;
     position: absolute;
     right: 1.6rem;;
-}
-@media(max-width: 768px) {
-    .itens-carrinho {
-        padding: 1rem 2rem;    
-        font-size: 1.6rem;
-    }
-
 }
