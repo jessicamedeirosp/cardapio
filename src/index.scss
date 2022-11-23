@@ -22,9 +22,11 @@ button {
     --border-radius: .8rem;
 }
 
-
+@mixin font-primary($font, $font2) {
+    font-family: $font,  $font2
+  }
 body {
-    font-family: 'Poppins', sans-serif;  
+    @include font-primary('Poppins', sans-serif); 
     color: var(--marron-500);
     background-color: var(--rosa-100);
 }
