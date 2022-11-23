@@ -1,7 +1,7 @@
 import { ICart } from "../../interfaces/CartInterface";
 import { converterPreco, somarCompra } from "../../utils/Utils";
 import CloseImagem from '../../assets/close.svg';
-import './index.css'
+import './index.scss'
 import { useState } from "react";
 
 export function Cart({ produtosNoCarrinho, abrirFecharCarrinho, carrinhoAberto }: ICart) {

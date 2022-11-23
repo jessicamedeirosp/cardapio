@@ -1,0 +1,40 @@
+.carrinho {
+    &__titulo {
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &__produto {
+        margin-bottom: 1rem;
+        &__imagem {
+            width: 80px;
+            border-radius: var(--border-radius);
+        }
+    }
+    &__total {
+        color: var(--rosa-500)
+    }
+    &__fechar {
+        display: none;    
+    }
+    &__cabecalho {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    @media(max-width: 768px) {        
+        width: 100%;
+        height: 100%;
+        padding: 2rem 1rem;
+        background: var(--rosa-100); 
+        position: absolute;        
+        top: 0;     
+        display: none;
+        &--aberto {
+            display: block;
+        }
+        &__fechar {
+            display: block;
+        }
+    }
+}
