@@ -1,3 +1,4 @@
+
 import { IProduto, IProdutoList, IProdutoNoCarrinho } from "../../interfaces/ProdutoInterface";
 import { converterPreco } from "../../utils/Utils";
 import './index.css'
@@ -6,14 +7,14 @@ export function ProdutoList({item, setProdutosNoCarrinho, produtosNoCarrinho}: I
     const {nome, descricao, preco}: IProduto = item;   
 
     function adicionarProdutoNoCarrinho() {
-        let newItem: IProdutoNoCarrinho = {
+        let newItem: IProdutoNoCarrinho  = {
             ...item,
             quantidade: 1
         }
-        const existeProdutoNoCarrinho = produtosNoCarrinho.filter((produto: IProdutoNoCarrinho) => produto.id === item.id)
+        const existeProdutoNoCarrinho: IProdutoNoCarrinho[] = produtosNoCarrinho.filter((produto: IProdutoNoCarrinho) => produto.id === item.id)
      
          if(existeProdutoNoCarrinho.length) {
-             const novoProdutosNoCarrinho =  produtosNoCarrinho.filter((produto: IProdutoNoCarrinho) => produto.id !== item.id)
+             const novoProdutosNoCarrinho: IProdutoNoCarrinho[] =  produtosNoCarrinho.filter((produto) => produto.id !== item.id)
             newItem = {
                 ...existeProdutoNoCarrinho[0], 
                 quantidade: existeProdutoNoCarrinho[0].quantidade + 1 

@@ -1,5 +1,5 @@
 import { IProdutoNoCarrinho } from './ProdutoInterface';
 export interface IHeader {
-  produtosNoCarrinho: IProdutoNoCarrinho[],
-  abrirFecharCarrinho: () => void
+    produtosNoCarrinho: IProdutoNoCarrinho[], 
+    abrirFecharCarrinho: () => void
 }

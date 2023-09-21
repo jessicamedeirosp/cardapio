@@ -1,19 +1,20 @@
 
 import logoImagem from "../../assets/logo.svg";
-import { IHeader } from "../../interfaces/HeaderInteface";
+import { IHeader } from "../../interfaces/HeaderInterface";
+
 import { somarQuantidadeDeProdutos } from "../../utils/Utils";
-import './index.css';
+import { Cabecalho, ItensCarrinho } from './styles'
 
 export function Header({produtosNoCarrinho, abrirFecharCarrinho}: IHeader ) {
-  const quantidadeDeProdutosNoCarrinho = somarQuantidadeDeProdutos(produtosNoCarrinho)
+  const quantidadeDeProdutosNoCarrinho: number = somarQuantidadeDeProdutos(produtosNoCarrinho)
   return (
-    <header className="cabecalho">
+    <Cabecalho className="cabecalho">
       <div className="conteudo posicao-relativa conteudo-flexivel alinhar-centro justificar-centro">
         <img src={logoImagem} alt="jess doces" className="logo" />
-        <a href="#" className="itens-carrinho" onClick={abrirFecharCarrinho}>
+        <ItensCarrinho href="#" className="itens-carrinho" onClick={abrirFecharCarrinho}>        
          {quantidadeDeProdutosNoCarrinho ? quantidadeDeProdutosNoCarrinho : 0 }      
-        </a>
+        </ItensCarrinho>
       </div>
-    </header>
+    </Cabecalho>
   );
 }
